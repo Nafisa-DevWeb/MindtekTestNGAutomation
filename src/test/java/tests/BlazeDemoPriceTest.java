@@ -11,13 +11,14 @@ import utilities.TestBase;
 import java.util.List;
 
 public class BlazeDemoPriceTest extends TestBase {
-    BlazeDemoHomePage blazeDemoHomepage=new BlazeDemoHomePage();
-    BlazeDemoFlightsPage blazeDemoFlightsPage=new BlazeDemoFlightsPage();
+
 
     //This test will verify that all flight prices are bellow $1000
 
     @Test
     public void priceTest(){
+        BlazeDemoHomePage blazeDemoHomepage=new BlazeDemoHomePage();
+        BlazeDemoFlightsPage blazeDemoFlightsPage=new BlazeDemoFlightsPage();
         driver.get(Configuration.getProperty("BlazeDemoURL"));
      //   driver.findElement(By.xpath("//input[@type='submit']")).click();
         blazeDemoHomepage.findFlightButton.click();
