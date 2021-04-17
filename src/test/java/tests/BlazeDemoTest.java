@@ -19,8 +19,8 @@ public class BlazeDemoTest extends TestBase { //once extend TestBase class,
     //methods being inherited: setUp(); and tearDown();
     //attributes being inherited:driver;
 
-
-    @Test
+//Test Title
+    @Test(groups = {"regression"})
     public void test(){
         driver.get(Configuration.getProperty("BlazeDemoURL"));
         driver.findElement(By.xpath("//input[@type='submit']")).click();

@@ -12,13 +12,13 @@ public class TestBase {
  //Attribute
     protected WebDriver driver;// here access default, we need write public or protected
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"regression","smoke"})
     public void setUp(){
         driver = Driver.getDriver();
     }
 
 
-    @AfterMethod
+    @AfterMethod(groups = {"regression","smoke"})
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();

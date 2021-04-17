@@ -18,5 +18,13 @@ public class BlazeDemoHomePage {
     }
     @FindBy(xpath = "//input[@type='submit']")
     public WebElement findFlightButton;
+
+    @FindBy(xpath="//select[@name='fromPort']")
+    public WebElement departureCity;
+
+    @FindBy(xpath="//select[@name='toPort']")
+    public WebElement destinationCity;
+
+
 }
 
